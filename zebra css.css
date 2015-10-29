@@ -1,0 +1,76 @@
+*
+#wrapper
+{
+    font-family: Verdana;
+    width: 600px;
+}
+table
+{
+    width: 80%;
+    margin: auto;
+    min-width: 600px;
+    max-width: 1500px;
+    border-collapse: collapse;
+    overflow: hidden;
+    text-align: center;
+}
+th
+{
+    background:hsla(285, 100%, 70%, 1) ;
+    font-size: 16px;    
+}
+td
+{
+    position: relative;
+    border: 1px dashed black;
+    height: 90px;
+    width:70px; 
+}
+caption
+{
+    font-size: 20px;
+    padding: 5px;
+    background-color: white;
+}
+tr:nth-child(odd) td:first-child::before 
+{
+    content: "";
+    position: absolute;
+    background-color: hsla(315, 100%, 70%, 1); 
+    top: 0;
+    left: -5000px;
+    width: 10000px;
+    height: 100%;
+    z-index: -2;
+}
+tr:nth-child(even) td:first-child::before
+{
+    content: "";
+    position: absolute;
+    background-color:hsla(285, 100%, 70%, 1);
+    top: 0;
+    left: -5000px;
+    width: 10000px;
+    height: 100%;
+    z-index: -2;
+}
+tr:hover 
+{
+    padding: 10px;
+    background-color: hsla(196, 100%, 75%, 1);
+}
+
+td:hover::after 
+{
+    content: "";
+    position: absolute;
+    background-color:hsla(196, 100%, 75%, 1);
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
+
+/*https://responsivedesign.is/resources/data-tables/responsive-tables
+/*http://www.dave-woods.co.uk/nth-child-selector 
